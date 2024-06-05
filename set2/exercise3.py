@@ -18,7 +18,7 @@ def is_odd(a_number):
 
     So if a_number modulo two is zero, then it's even.
     """
-    return None
+    return a_number % 2 != 0
 
 
 def fix_it(moves=True, should_move=True):
@@ -36,7 +36,16 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements.
     As an extra challenge, see if you can get that down to three.
     """
-    return None
+    if moves:
+        if should_move:
+            return "No Problem"
+        else:
+            return "Duct Tape"
+    else:
+        if should_move:
+            return "WD-40"
+        else:
+            return "No Problem"
 
 
 def loops_preview():
@@ -59,7 +68,10 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return None
+    start_list = []
+    for _ in range(10):
+        star_list.append("*")
+        return start_list
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -72,6 +84,8 @@ def loops_1c(number_of_items=5, symbol="#"):
     Remember that you're being passed arguments here. Don't hard code the number
     or the symbol, let it be whatever it wants to be.
     """
+    result_list = []
+
     return None
 
 
@@ -245,6 +259,7 @@ if __name__ == "__main__":
     # code is robust to the situations that you'll see in action.
     try:
         from helper import little_printer, minitest
+
         minitest(is_odd, [1], True)
         minitest(is_odd, [4], False)
         minitest(fix_it, [True, True], "No Problem")
@@ -262,6 +277,9 @@ if __name__ == "__main__":
         little_printer(loops_6(), "loops_6")
         little_printer(loops_7(), "loops_7")
     except ModuleNotFoundError as e:
-        print("⚠"*20, "\nWe're looking for a module that's missing. That's probably a problem that a tutor needs to figure out.\n")
+        print(
+            "⚠" * 20,
+            "\nWe're looking for a module that's missing. That's probably a problem that a tutor needs to figure out.\n",
+        )
         print(e)
-        print("⚠"*20)
+        print("⚠" * 20)
