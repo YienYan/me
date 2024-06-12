@@ -70,7 +70,7 @@ def loops_1a():
     """
     start_list = []
     for _ in range(10):
-        star_list.append("*")
+        start_list.append("*")
         return start_list
 
 
@@ -85,8 +85,9 @@ def loops_1c(number_of_items=5, symbol="#"):
     or the symbol, let it be whatever it wants to be.
     """
     result_list = []
-
-    return None
+    for _ in range(number_of_items):
+        result_list.append(symbol)
+    return result_list
 
 
 def loops_2_preview():
@@ -128,7 +129,11 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
+    starfield = []
+    for _ in range(10):
+        row = ["*"] * 10
+        starfield.append(row)
+    return starfield
 
 
 def loops_3():
@@ -152,7 +157,11 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
+    number_block = []
+    for i in range(10):
+        row = [str(i)] * 10
+        number_block.append(row)
+    return number_block
 
 
 def loops_4():
@@ -172,7 +181,9 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    lst = []
+    for number in range(0, 10, 1):
+        print（lst.extend(number)]
 
 
 def loops_5():
@@ -202,7 +213,11 @@ def loops_5():
         f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
     """
-    return None
+    number_block = []
+    for _ in range(10):
+        row = [str(i) for i in range(10)]
+        number_block.append(row)
+    return number_block
 
 
 def loops_6():
@@ -225,7 +240,11 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    wedge = []
+    for i in range(10):
+        row = [str(j) for j in range(i + 1)]
+        wedge.append(row)
+    return wedge
 
 
 def loops_7():
@@ -249,7 +268,15 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
+    pyramid = []
+    for i in range(5):
+        row = [" "] * 9
+        num_stars = 2 * i + 1
+        start_index = 4 - i
+        for j in range(num_stars):
+            row[start_index + j * 2] = "x"
+        pyramid.append(row)
+    return pyramid
 
 
 if __name__ == "__main__":
