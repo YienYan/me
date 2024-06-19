@@ -36,16 +36,16 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements.
     As an extra challenge, see if you can get that down to three.
     """
-    if moves:
-        if should_move:
-            return "No Problem"
-        else:
-            return "Duct Tape"
+    if moves and should_move:
+        return "No Problem"
+    elif moves and not should_move:
+        return "WD-40"
+    elif not moves and not should_move:
+        return "No Problem"
+    elif not moves and should_move:
+        return "Duct Tape"
     else:
-        if should_move:
-            return "WD-40"
-        else:
-            return "No Problem"
+        return "something is not right here mates, looks expensive "
 
 
 def loops_preview():
@@ -181,9 +181,11 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    lst = []
-    for number in range(0, 10, 1):
-        print（lst.extend(number)]
+    number_block = []
+    for _ in range(10):
+        row = [str(i) for i in range(10)]
+        number_block.append(row)
+    return number_block
 
 
 def loops_5():
@@ -213,11 +215,15 @@ def loops_5():
         f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
     """
-    number_block = []
-    for _ in range(10):
-        row = [str(i) for i in range(10)]
-        number_block.append(row)
-    return number_block
+    field = []
+    for i in range(10):
+        row = []
+        for j in range(5):
+            row.append("(i{}, j{})".format(i, j))
+        field.append(row)
+    return field
+    for row in field:
+        print(row)
 
 
 def loops_6():
@@ -268,15 +274,18 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    pyramid = []
-    for i in range(5):
-        row = [" "] * 9
-        num_stars = 2 * i + 1
-        start_index = 4 - i
-        for j in range(num_stars):
-            row[start_index + j * 2] = "x"
-        pyramid.append(row)
-    return pyramid
+    columns = []
+    for x in range(5):
+        rows = []
+        for y in range(9):
+            if abs(y - 4) <= x:
+                rows.append("*")
+            else:
+                rows.append(" ")
+        columns.append(rows)
+
+    print(columns)
+    return columns
 
 
 if __name__ == "__main__":
