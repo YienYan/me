@@ -26,15 +26,12 @@ def loop_ranger(start, stop=None, step=1):
         while current < start:
             result.append(current)
             current += step
-else: 
-    my__range = []
-    for i in range(start, stop, step):
-
-        my__range.append(i)
-        while start < stop:
-            my__range.append(start)
-            start += step
-            return my__range
+    else:
+        current = start
+        while current < stop:
+            result.append(current)
+            current += step
+    return result
 
 
 def two_step_ranger(start, stop):
