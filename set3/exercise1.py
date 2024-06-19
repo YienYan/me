@@ -20,8 +20,16 @@ def loop_ranger(start, stop=None, step=1):
     Look up for how range() works in the python docs. You could  answer this
     with just the range function, but we'd like you to do it the long way.
     """
+    result = []
+    if stop is None:
+        current = 0
+        while current < start:
+            result.append(current)
+            current += step
+else: 
     my__range = []
     for i in range(start, stop, step):
+
         my__range.append(i)
         while start < stop:
             my__range.append(start)
