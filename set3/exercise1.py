@@ -5,6 +5,9 @@ Modify each function until the tests pass.
 """
 
 
+from locale import currency
+
+
 def loop_ranger(start, stop=None, step=1):
     """Return a list of numbers between start and stop in steps of step.
 
@@ -17,7 +20,13 @@ def loop_ranger(start, stop=None, step=1):
     Look up for how range() works in the python docs. You could  answer this
     with just the range function, but we'd like you to do it the long way.
     """
-    return None
+    my__range = []
+    for i in range(start, stop, step):
+        my__range.append(i)
+        while start < stop:
+            my__range.append(start)
+            start += step
+            return my__range
 
 
 def two_step_ranger(start, stop):
