@@ -1,6 +1,5 @@
 """All about IO."""
 
-
 import json
 import os
 import requests
@@ -77,7 +76,22 @@ def wordy_pyramid():
     ]
     TIP: to add an argument to a URL, use: ?argName=argVal e.g. &wordlength=
     """
+
     pyramid = []
+
+    for i in range(3, 20, 2):
+        ur1 = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength=20{i}"
+        response = requests.get(ur1)
+        if response.status_code == 200:
+            word = response.text
+            pyramid.append(word)
+
+    for i in range(11, 4, -2):
+        ur1 = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength=20{i}"
+        response = requests.get(ur1)
+        if response.status_code == 200:
+            word = response.text
+            pyramid.append(word)
 
     return pyramid
 

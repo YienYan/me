@@ -8,7 +8,7 @@ Modify each function until the tests pass.
 from locale import currency
 
 
-def loop_ranger(start, stop=None, step=1):
+def loop_ranger(start=3, stop=10, step=2):
     """Return a list of numbers between start and stop in steps of step.
 
     Using a while loop make a list of numbers that goes from the start number up
@@ -21,16 +21,10 @@ def loop_ranger(start, stop=None, step=1):
     with just the range function, but we'd like you to do it the long way.
     """
     result = []
-    if stop is None:
-        current = 0
-        while current < start:
-            result.append(current)
-            current += step
-    else:
-        current = start
-        while current < stop:
-            result.append(current)
-            current += step
+    current = start
+    while current < stop:
+        result.append(current)
+        current += step
     return result
 
 
@@ -42,7 +36,12 @@ def two_step_ranger(start, stop):
 
     You can either reuse loop_ranger, or the range function that in the standard library
     """
-    return None
+    result = []
+    current = start
+    while current < stop:
+        result.append(current)
+        current += 2
+    return result
 
 
 def stubborn_asker(low, high):
@@ -53,7 +52,12 @@ def stubborn_asker(low, high):
 
     Look up the docs for a function called "input"
     """
-    return None
+    while True:
+        val = input(f"enter a number between {low} and {high}: ")
+        num = int(val)
+        return num
+    else:
+        print(f"{val} is not between {low} and {high}, try again")
 
 
 def not_number_rejector(message):
@@ -63,7 +67,12 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    return None
+    while True:
+        val = input(f"enter a number: ")
+        num = int(val)
+        return num
+    else:
+        print(f"{val} is not a number, throw it out")
 
 
 def super_asker(low, high):
