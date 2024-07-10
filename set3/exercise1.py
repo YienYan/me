@@ -5,9 +5,6 @@ Modify each function until the tests pass.
 """
 
 
-from locale import currency
-
-
 def loop_ranger(start=3, stop=10, step=2):
     """Return a list of numbers between start and stop in steps of step.
 
@@ -53,11 +50,14 @@ def stubborn_asker(low, high):
     Look up the docs for a function called "input"
     """
     while True:
-        val = input(f"enter a number between {low} and {high}: ")
-        num = int(val)
-        return num
-    else:
-        print(f"{val} is not between {low} and {high}, try again")
+        try:
+            num = int(input(f"Please enter a number between {low} and {high}:"))
+            if low <= num <= high:
+                return num
+            else:
+                print(f"The number is not between {low} and {high}. Please try again.")
+        except ValueError:
+            print("That's not a valid number. Please enter an integer.")
 
 
 def not_number_rejector(message):
@@ -68,11 +68,11 @@ def not_number_rejector(message):
     When you do get a number, return it.
     """
     while True:
-        val = input(f"enter a number: ")
-        num = int(val)
-        return num
-    else:
-        print(f"{val} is not a number, throw it out")
+        try:
+            num = int(input(message))
+            return num
+        except ValueError:
+            print("That's not a valid number. Please enter an interger.")
 
 
 def super_asker(low, high):
@@ -81,7 +81,15 @@ def super_asker(low, high):
     Combine what you learnt from stubborn_asker and not_number_rejector
     to make a function that does it all!
     """
-    return None
+    while True:
+        try:
+            num = int(input(f"please enter a number between {low} and {high}:"))
+            if low <= num <= high:
+                return num
+            else:
+                print(f"The number is not between {low} and {high}. Please try again.")
+        except ValueError:
+            print("That's not a valid number. Please enter an integer.")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,70 @@
+for i in range(10):
+    print(i) 
+
+
+names = ["Taeil Moon", "Yuta", "Taeyong Lee", "Jungwoo Kim" , "Mark Lee", "Haechan Lee", "JaeHyun Jan", "Winwin Dong", "Johnny", "Doyoung Kim"]
+for name in names:
+    print(name)
+
+lengths = []
+for name in names:
+    lengths.append(len(name))
+print(lengths)
+
+lengths = [len(name) for name in names]
+print(lengths)
+
+counter = 0
+while counter < 10:
+    print(counter)
+    counter += 1
+
+counter = 0
+while counter < 5:
+    print(counter)
+    counter += 1
+
+import random  # noqa: E402
+
+guard = 0
+coin = "tails"
+while coin == "tails" and guard < 10:
+    coin = random.sample(["heads", "tails"], 1)[0]
+    print(coin, guard)
+    guard += 1
+
+for  _ in range(5):
+    print()
+    guard = 0
+    coin = "tails"
+    while coin == "tails" and guard < 10:
+        coin = random.sample(["heads", "tails"],1)[0]
+        print(coin, guard)
+        guard +=1
+
+#unpacking:
+a, b, c = ("⛄️", "🦦" ,"🦋")
+print(a)
+print(b)
+print(c)
+
+for name in enumerate(names):
+    print(name)
+
+for i, name in enumerate(names):
+    print(name, len(name), i * 5)
+
+import pandas as pd  # noqa: E402
+
+NCT127 = [
+    {"NCT127_name": "Taeil Moon", "real_name": "태일"},
+    {"NCT127_name": "Yuta", "real_name": "유타"},
+    {"NCT127_name": "Taeyong Lee", "real_name": "태용"},
+    {"NCT127_name": "Jungwoo Kime", "real_name": "정우"}
+]
+
+NCT127_df = pd.DataFrame(NCT127)
+print(NCT127_df)
+
+for row in NCT127_df:
+    print(row)
