@@ -268,34 +268,34 @@
   },
   {
     "of_total": 7,
-    "mark": 0,
+    "mark": 7,
     "results": [
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 1: get some data out of a JSON file"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 1: request some words from the internet"
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 1: Consult the Pokedex."
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 1: Consult the Pokedex."
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 1: Consult the Pokedex."
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 1: Consult the Pokedex."
       },
       {
-        "value": 0,
+        "value": 1,
         "name": "Exercise 1: count the lasers."
       }
     ],
@@ -303,35 +303,35 @@
   },
   {
     "of_total": 15,
-    "mark": 4,
+    "mark": 8,
     "results": [
       {
-        "value": 0,
-        "name": "exercise 1: get_a_word_of_length_n None"
+        "value": 1,
+        "name": "exercise 1: get_a_word_of_length_n baaed"
       },
       {
-        "value": 0,
-        "name": "exercise 1: get_a_word_of_length_n None"
+        "value": 1,
+        "name": "exercise 1: get_a_word_of_length_n ionicism"
       },
       {
-        "value": 0,
-        "name": "exercise 1: get_a_word_of_length_n None"
+        "value": 1,
+        "name": "exercise 1: get_a_word_of_length_n naam"
       },
       {
         "value": 1,
         "name": "exercise 1: get_a_word_of_length_n None"
       },
       {
+        "value": 0,
+        "name": "exercise 1: get_a_word_of_length_n invalid literal for int() with base 10: 'a'"
+      },
+      {
         "value": 1,
-        "name": "exercise 1: get_a_word_of_length_n None"
+        "name": "exercise 1: list_of_words_with_lengths invalid literal for int() with base 10: 'a'"
       },
       {
-        "value": 0,
-        "name": "exercise 1: list_of_words_with_lengths None"
-      },
-      {
-        "value": 0,
-        "name": "exercise 1: list_of_words_with_lengths None"
+        "value": 1,
+        "name": "exercise 1: list_of_words_with_lengths invalid literal for int() with base 10: 'a'"
       },
       {
         "value": 0,
