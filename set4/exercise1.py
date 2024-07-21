@@ -160,7 +160,7 @@ def diarist():
         lines = f.readlines()
         for line in lines:
             count += line.count(content)
-    with open("set4/lasers.pew", mode="w") as f:
+    with open("./set4/lasers.pew", mode="w") as f:
         f.write(str(count))
 
 
