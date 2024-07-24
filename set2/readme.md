@@ -172,4 +172,84 @@ s6 = str(invalid_bytes, 'utf-8', errors='replace')
 print(s6)  # Output: '�'
 
 
+format
+The 'format' method in Python is a powerful tool used for formatting strings. It allows you to insert variables into strings using placeholders '{}', making string interpolation flexible and readable.
 
+Basic Syntax
+str.format(*args, **kwargs)
+'*args': Positional arguments that are inserted into the '{}' placeholders in the order they are provided.
+'**kwargs': Keyword arguments that are inserted into the '{}' placeholders by name.
+Basic Usage Examples
+Simple Placeholder:
+name = "Alice"
+age = 30
+formatted_string = "My name is {} and I am {} years old.".format(name, age)
+print(formatted_string)
+# Output: My name is Alice and I am 30 years old.
+
+Using Positional Arguments:
+formatted_string = "The {0} is {1}.".format("price", 10)
+print(formatted_string)
+# Output: The price is 10.
+
+Using Keyword Arguments:
+formatted_string = "The {item} is {value}.".format(item="price", value=10)
+print(formatted_string)
+# Output: The price is 10.
+
+Mixing Positional and Keyword Arguments:
+formatted_string = "The {0} is {value}.".format("price", value=10)
+print(formatted_string)
+# Output: The price is 10.
+
+Number Formatting:
+Specifying decimal places:
+pi = 3.14159265
+formatted_string = "Pi is approximately {:.2f}.".format(pi)
+print(formatted_string)
+# Output: Pi is approximately 3.14.
+Adding thousand separators:
+number = 1000000
+formatted_string = "The number is {:,}".format(number)
+print(formatted_string)
+# Output: The number is 1,000,000.
+
+Padding and Alignment:
+Left, center, and right alignment:
+text = "Hello"
+formatted_string = "|{:<10}|{:^10}|{:>10}|".format(text, text, text)
+print(formatted_string)
+# Output: |Hello     |  Hello   |     Hello|
+Using a specific character for padding:
+formatted_string = "{:*^10}".format(text)
+print(formatted_string)
+# Output: **Hello***
+
+example:
+name = "Alice"
+age = 30
+balance = 12345.6789
+
+# Basic usage
+print("My name is {} and I am {} years old.".format(name, age))
+
+# Positional arguments
+print("The {0} is {1}.".format("price", 10))
+
+# Keyword arguments
+print("The {item} is {value}.".format(item="price", value=10))
+
+# Number formatting
+print("Pi is approximately {:.2f}.".format(3.14159265))
+
+# Thousand separators
+print("The number is {:,}".format(1000000))
+
+# Padding and alignment
+print("|{:<10}|{:^10}|{:>10}|".format("Left", "Center", "Right"))
+
+# Using specific character for padding
+print("{:*^10}".format("Hello"))
+
+# Comprehensive example
+print("Name: {name}, Age: {age}, Balance: ${balance:,.2f}".format(name=name, age=age, balance=balance))
