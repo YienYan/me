@@ -18,6 +18,7 @@ def give_me_five() -> int:
     """Returns the integer five."""
     return int(5)
 
+
 def password_please() -> str:
     """Returns a string, 8 or more characters long, contains at
     least one upper case letter and one lowercase letter.
@@ -42,18 +43,12 @@ def string_list_please() -> list[str]:
 
 def dictionary_please() -> dict:
     """Returns a dictionary, anything you like."""
-    return {
-        "name": "Shotaro",
-        "age": 24,
-        "city": "Kanagawa",
-        "occupation": "Dancer"
-
-    }
+    return {"name": "Shotaro", "age": 24, "city": "Kanagawa", "occupation": "Dancer"}
 
 
 def is_it_5(some_number) -> bool:
     """Returns True if the argument passed is 5, otherwise returns False."""
-    well_is_it = (some_number == 5)
+    well_is_it = some_number == 5
     return well_is_it
 
 
@@ -69,7 +64,6 @@ def greet(name="Towering Timmy") -> str:
          return "Well hello, Towering Timmy"
     """
     return f"Well hello, {name}"
-
 
 
 def one_counter(input_list=[1, 4, 1, 5, 1, 1]) -> int:
@@ -153,8 +147,6 @@ def the_chain_gang_5(the_value) -> bool:
     return is_it_5(result)
 
 
-
-
 def pet_filter(letter="a") -> list:
     """Return a list of pets whose name contains the character 'letter'"""
     # fmt: off
@@ -199,6 +191,7 @@ def best_letter_for_pets() -> str:
                 most_popular_letter = letter
     return most_popular_letter
 
+
 def make_filler_text_dictionary() -> dict:
     """Make a dictionary of random words filler text.
     There is a random word generator here:
@@ -228,9 +221,9 @@ def make_filler_text_dictionary() -> dict:
     wd = {}
 
     for length in range(3, 8):
-        words = [ ]
+        words = []
         for _ in range(4):
-            response = requests.get(url+ str(length))
+            response = requests.get(url + str(length))
             if response.status_code == 200:
                 words.append(response.text)
         wd[length] = words

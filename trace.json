@@ -372,7 +372,7 @@
   "7",
   {
     "of_total": 38,
-    "mark": 35,
+    "mark": 34,
     "results": [
       {
         "value": 1,
@@ -512,19 +512,19 @@
       },
       {
         "value": 0,
-        "name": "\nfast_filler:\n    given:    100\n    expected: True\n    got:      False"
+        "name": "\nfast_filler:\n    given:    [100]\n    expected: True\n    got:      Expecting value: line 1 column 1 (char 0)"
       },
       {
         "value": 0,
-        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      string index out of range"
+        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      Expecting value: line 1 column 1 (char 0)"
       },
       {
         "value": 0,
-        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      string index out of range"
+        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      Expecting value: line 1 column 1 (char 0)"
       },
       {
-        "value": 1,
-        "name": "subsequent fast_filler"
+        "value": 0,
+        "name": "subsequent fast_filler failed: Expecting value: line 1 column 1 (char 0)"
       }
     ],
     "week_number": 8
