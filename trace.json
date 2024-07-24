@@ -372,7 +372,7 @@
   "7",
   {
     "of_total": 34,
-    "mark": 30,
+    "mark": 31,
     "results": [
       {
         "value": 1,
@@ -496,19 +496,19 @@
       },
       {
         "value": 0,
-        "name": "\nfast_filler:\n    given:    [100]\n    expected: True\n    got:      module 'json' has no attribute 'dunp'"
+        "name": "\nfast_filler:\n    given:    [100]\n    expected: True\n    got:      'NoneType' object has no attribute 'split'"
       },
       {
         "value": 0,
-        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      Expecting value: line 1 column 1 (char 0)"
+        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      'NoneType' object is not subscriptable"
       },
       {
         "value": 0,
-        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      Expecting value: line 1 column 1 (char 0)"
+        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      'NoneType' object is not subscriptable"
       },
       {
-        "value": 0,
-        "name": "subsequent fast_filler failed: Expecting value: line 1 column 1 (char 0)"
+        "value": 1,
+        "name": "subsequent fast_filler"
       }
     ],
     "week_number": 8

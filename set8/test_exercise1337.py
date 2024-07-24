@@ -10,13 +10,14 @@ import os
 import random
 import string
 import time
-from typing import Any
 import requests
+from typing import Dict, List
 
 
 def give_me_five() -> int:
     """Returns the integer five."""
     return int(5)
+
 
 def password_please() -> str:
     """Returns a string, 8 or more characters long, contains at
@@ -25,17 +26,17 @@ def password_please() -> str:
     return str("Wendy Blue Ocean")
 
 
-def list_please() -> list[Any]:
+def list_please() -> list:
     """Returns a list, you can put anything in the list."""
     return [1, "Jw", True, 1998, None]
 
 
-def int_list_please() -> list[int]:
+def int_list_please() -> list:
     """Returns a list of integers, any integers are fine."""
     return [3, 7, 12, 30, 90]
 
 
-def string_list_please() -> list[str]:
+def string_list_please() -> list:
     """Returns a list of strings, any string are fine."""
     return ["mandarine", "childhood", "concern", "grass", "apple"]
 
@@ -71,7 +72,6 @@ def greet(name="Towering Timmy") -> str:
     return f"Well hello, {name}"
 
 
-
 def one_counter(input_list=[1, 4, 1, 5, 1, 1]) -> int:
     """Count the number of 1s in the input_list.
     Return an integer.
@@ -89,7 +89,7 @@ def n_counter(search_for_this, input_list=[1, 4, 1, 5, 1, 1]) -> int:
     return count
 
 
-def fizz_buzz() -> list:
+def fizz_buzz() -> List:
     """Do the fizzBuzz.
 
     This is the most famous basic programming test of all time!
@@ -117,7 +117,7 @@ def fizz_buzz() -> list:
             fizz_buzz_list.append("Buzz")
         else:
             fizz_buzz_list.append(i)
-
+        
     return fizz_buzz_list
 
 
@@ -132,28 +132,13 @@ def set_it_on_fire(input_string="very naughty boy") -> str:
     TIP: consider using the 'join' method in Python.
     TIP: make sure that you have a 🔥 on both ends of the string.
     """
-
     upper_string = input_string.upper()
     interleaved_string = "🔥" + "🔥".join(list(upper_string)) + "🔥"
 
     return interleaved_string
 
 
-def the_chain_gang_5(the_value) -> bool:
-    """Take the_value, subtract 5 from it, and return True if the value we end up with it 5.
-
-    You don't get anything for free this far into the quiz, you can't
-    use the == operator or the - operator, and you must use two of the
-    functions you've already written.
-
-    TIP: you've already written a function that returns True if the value is 5
-    TIP: you've already written a function that subtracts 5
-    """
-
-
-
-
-def pet_filter(letter="a") -> list:
+def pet_filter(letter="a") -> List:
     """Return a list of pets whose name contains the character 'letter'"""
     # fmt: off
     pets = [
@@ -196,8 +181,10 @@ def best_letter_for_pets() -> str:
                 max_len = filter_len
                 most_popular_letter = letter
     return most_popular_letter
+   
 
-def make_filler_text_dictionary() -> dict:
+
+def make_filler_text_dictionary() -> Dict:
     """Make a dictionary of random words filler text.
     There is a random word generator here:
     https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength=4
@@ -267,7 +254,6 @@ def fast_filler(number_of_words=200) -> str:
     the internet.
     Use the filename "dict_cache.json"
     TIP: you'll need the os and json libraries
-    TIP: This is making sentences. Make the first letter capital, and add a full stop to the end.
     TIP: you'll probably want to use json dumps and loads to get the
     dictionary into and out of the file. Be careful when you read it back in,
     it'll convert integer keys to strings.
@@ -276,7 +262,26 @@ def fast_filler(number_of_words=200) -> str:
 
     fname = "dict_cache.json"
 
-    return None
+    if os.path.exists(fname):
+        with open(fname, 'r') as file:
+            word_dict = json.load(file)
+        word_dict = {int(k): v for k, v in word_dict.items()}
+    else:
+        word_dict = make_filler_text_dictionary()
+        with open(fname, 'w') as file:
+            json.dunp(word_dict, file)
+
+
+    filler_text = [ ]
+    lengths = list(word_dict.keys())
+
+    for _ in range(number_of_words):
+        length = random.choice(lengths)
+        word = random.choice(word_dict[length])
+        filler_text.append(word)
+
+
+    return ' '.join(filler_text)
 
 
 if __name__ == "__main__":
@@ -300,8 +305,6 @@ if __name__ == "__main__":
     print("n_counter:", n_counter(7))
     print("fizz_buzz:", fizz_buzz())
     print("put_behind_bars:", set_it_on_fire())
-    print("chaing gang 5", the_chain_gang_5(5))
-    print("chaing gang 5", the_chain_gang_5(10))
     print("pet_filter:", pet_filter())
     print("best_letter_for_pets:", best_letter_for_pets())
     print("make_filler_text_dictionary:", make_filler_text_dictionary())
