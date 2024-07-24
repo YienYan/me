@@ -273,12 +273,19 @@ def fast_filler(number_of_words=200) -> str:
     if os.path.exists(fname):
         with open(fname) as f:
             json_str = f.read()
+            my_dict = json.loads(json_str)
+            my_dict = {int(k): v for k, v in my_dict.items()}
+            words = []
+            for _ in range(number_of_words):
+                word_length = random.randint(3, 7)
+                word = random.choice(my_dict[word_length])
+                words.append(word)
+        return "".join(words)
     else:
         wd = make_filler_text_dictionary()
         json_str = json.dumps(wd)
         with open(fname, "w") as f:
             f.write(json_str)
-    return json_str
 
 
 if __name__ == "__main__":
