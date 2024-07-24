@@ -153,6 +153,9 @@ def pet_filter(letter="a") -> List:
     ]
     # fmt: on
     filtered = []
+    for pet in pets:
+        if letter in pet:
+            filtered.append(pet)
 
     return filtered
 
@@ -200,6 +203,14 @@ def make_filler_text_dictionary() -> Dict:
 
     url = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength="
     wd = {}
+
+    for length in range(3, 8):
+        words = [ ]
+        for _ in range(4):
+            response = requests.get(url+ str(length))
+            if response.status_code == 200:
+                words.append(response.text)
+        wd[length] = words
 
     return wd
 
