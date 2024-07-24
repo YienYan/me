@@ -149,6 +149,8 @@ def the_chain_gang_5(the_value) -> bool:
     TIP: you've already written a function that returns True if the value is 5
     TIP: you've already written a function that subtracts 5
     """
+    result = take_five(the_value)
+    return is_it_5(result)
 
 
 
@@ -275,8 +277,15 @@ def fast_filler(number_of_words=200) -> str:
     """
 
     fname = "dict_cache.json"
-
-    return None
+    if os.path.exists(fname):
+        with open(fname) as f:
+            json_str = f.read()
+    else:
+        wd = make_filler_text_dictionary()
+        json_str = json.dumps(wd)
+        with open(fname, "w") as f:
+            f.write(json_str)
+    return json_str
 
 
 if __name__ == "__main__":

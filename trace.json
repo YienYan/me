@@ -371,8 +371,8 @@
   "6",
   "7",
   {
-    "of_total": 34,
-    "mark": 31,
+    "of_total": 38,
+    "mark": 35,
     "results": [
       {
         "value": 1,
@@ -468,6 +468,22 @@
       },
       {
         "value": 1,
+        "name": "\nthe_chain_gang_5:\n    given:    10\n    expected: True\n    got:      True"
+      },
+      {
+        "value": 1,
+        "name": "\nthe_chain_gang_5:\n    given:    11\n    expected: False\n    got:      False"
+      },
+      {
+        "value": 1,
+        "name": "\ud83e\uddb9\u200d\u2640\ufe0f\u26d3\ufe0f\ud83e\uddb9\u200d\u2640\ufe0f\u26d3\ufe0f\ud83e\uddb9\u200d\u2640\ufe0f check that the_chain_gang_5 doesn't use =="
+      },
+      {
+        "value": 1,
+        "name": "\ud83e\uddb9\u200d\u2640\ufe0f\u26d3\ufe0f\ud83e\uddb9\u200d\u2640\ufe0f\u26d3\ufe0f\ud83e\uddb9\u200d\u2640\ufe0f check that the_chain_gang_5 doesn't use -"
+      },
+      {
+        "value": 1,
         "name": "\npet_filter:\n    given:    x\n    expected: ['red fox']\n    got:      ['red fox']"
       },
       {
@@ -496,15 +512,15 @@
       },
       {
         "value": 0,
-        "name": "\nfast_filler:\n    given:    [100]\n    expected: True\n    got:      'NoneType' object has no attribute 'split'"
+        "name": "\nfast_filler:\n    given:    100\n    expected: True\n    got:      False"
       },
       {
         "value": 0,
-        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      'NoneType' object is not subscriptable"
+        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      string index out of range"
       },
       {
         "value": 0,
-        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      'NoneType' object is not subscriptable"
+        "name": "\nfast_filler:\n    given:    [10]\n    expected: True\n    got:      string index out of range"
       },
       {
         "value": 1,
