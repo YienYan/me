@@ -172,8 +172,16 @@ def best_letter_for_pets() -> str:
 
     the_alphabet = string.ascii_lowercase
     most_popular_letter = ""
-
+    max_len = -1
+    for i in range(len(the_alphabet)):
+        letter = the_alphabet[i]
+        filter_len = len(pet_filter(letter))
+        if filter_len >= 1:
+            if filter_len > max_len:
+                max_len = filter_len
+                most_popular_letter = letter
     return most_popular_letter
+   
 
 
 def make_filler_text_dictionary() -> Dict:
@@ -229,6 +237,10 @@ def random_filler_text(number_of_words=200) -> str:
     my_dict = make_filler_text_dictionary()
 
     words = []
+    for _ in range(number_of_words):
+        word_length = random.randint(3, 7)
+        word = random.choice(my_dict[word_length])
+        words.append(word)
 
     return " ".join(words)
 
@@ -250,7 +262,26 @@ def fast_filler(number_of_words=200) -> str:
 
     fname = "dict_cache.json"
 
-    return None
+    if os.path.exists(fname):
+        with open(fname, 'r') as file:
+            word_dict = json.load(file)
+        word_dict = {int(k): v for k, v in word_dict.items()}
+    else:
+        word_dict = make_filler_text_dictionary()
+        with open(fname, 'w') as file:
+            json.dunp(word_dict, file)
+
+
+    filler_text = [ ]
+    lengths = list(word_dict.keys())
+
+    for _ in range(number_of_words):
+        length = random.choice(lengths)
+        word = random.choice(word_dict[length])
+        filler_text.append(word)
+
+
+    return ' '.join(filler_text)
 
 
 if __name__ == "__main__":
