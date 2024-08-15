@@ -1,1 +1,3 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+This week our teacher taught us how to download a map of a city and she downloaded a map of Sydney. But I didn't understand what the teacher meant at that time. I thought I just needed to load out the distribution map of my data, and I didn't need to use this kind of map, and then I realised that I needed to display the distribution map on top of the map.
+I think the teacher should have explained it in class at the time, but my English isn't good and I don't know why I can't understand ben when he talks, it feels vague. I never understood the meaning of story that Ben emphasised again and again. There are times when I am really sad that my mother tongue is not English.

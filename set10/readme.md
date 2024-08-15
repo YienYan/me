@@ -1,1 +1,10 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+I showed my teacher my map this week and he said he could add some interesting things, I didn't understand correctly, I thought giving pictures of plants was considered interesting. This led to the end of the presentation before I realised I had misunderstood. Then I also went online to learn how to draw scatter plots, bar graphs, maps, how to adjust parameters and so on.
+
+But I found that I learnt all this, but I still couldn't write it myself. So I went to chatgpt for help, and then I found that I could read the steps of chatgpt, and when I came across something with erro, I would check it out myself and correct it myself. I feel that this is a kind of progress, but it is still far from the teacher's requirements.
+
+PRESENTATION ENDED I realised clearly what our third major assignment teacher had specifically asked for. The teacher wanted us to analyse the data and then present the stories behind the individual data, but I thought that me identifying pictures of plants counted as an interesting story. I think I just didn't delve into my code on my own, didn't think on my own, and wasn't motivated. (Final week my focus was on my textile assignment, I roughly estimate I spent about 50 hours on this class during final week) resulting in me spending less time on my core course.
+
+At that time in the evening when I saw that the teacher asked me to talk about some interesting stories I was still catching up with my textile homework and didn't think deeply about the teacher's suggestions or ask my classmates about them because I didn't understand them, I really made a big mistake, luckily I could still modify the code after the presentation.
+
+I finished my assignment for textile at 8.15am at 8:30am. Starting to think hard about what fun stories my data could tell, I went to google searching if there are any very famous trees in Melbourne, and realised that no, there aren't any. It was only on 8.15 that I realised how tricky I had chosen my data.

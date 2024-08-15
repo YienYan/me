@@ -1,2 +1,4 @@
 TODO: Reflect on what you learned this week and what is still unclear.
-This week the teacher's class and students were introduced to ASSESSMENT 3, which involves asking a question about data and then listing lots of charts and graphs to answer.
+This week the teacher's class and students were introduced to ASSESSMENT 3, which involves asking a question about data and then listing lots of charts and graphs to answer.The teacher had our data imported into his template. Then change the content of the charts themselves, for example, this one is about COMMON NAME and the other one is about FAMILY. Study as many charts as you can and then look for interesting things and questions in them.
+
+I found out this week that all my data is tied to the diameter at breast height of the trees. For example, different FAMILIES affect the size of the tree's breast size, as do different geographical locations, as does the age of the plant. I think this question could correlate all the other information. So I thought about my question about what factors affect the diameter of a plant's chest.
