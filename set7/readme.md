@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+This week the teacher's class and students were introduced to ASSESSMENT 3, which involves asking a question about data and then listing lots of charts and graphs to answer.
